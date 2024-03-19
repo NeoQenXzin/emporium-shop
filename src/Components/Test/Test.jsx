@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Test = () => {
+  //Affichage item dans panier
+  const cartItems = useSelector((state) => state.cart.items);
+  const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   const [categories, setCategories] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(window.innerWidth >= 1024); // Gestion de l'état du menu collapsible
   const location = useLocation(); // Pour déterminer le chemin actuel
@@ -132,6 +137,9 @@ const Test = () => {
                 ></path>
               </svg>
               Cart
+              {itemCount > 0 && (
+                <span className="pl-1 text-gray-400">({itemCount})</span>
+              )}
             </Link>
           </li>
         </ul>

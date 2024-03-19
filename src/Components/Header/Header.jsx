@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import "./Header.css";
 // import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  //Affichage item dans panier
+  const cartItems = useSelector((state) => state.cart.items);
+  const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   const [categories, setCategories] = useState(null);
 
   useEffect(() => {
@@ -71,6 +76,11 @@ const Header = () => {
                     ></path>
                   </svg>
                   Panier
+                  {itemCount > 0 && (
+                    <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                      {itemCount}
+                    </span>
+                  )}
                 </li>
               </Link>
             </div>

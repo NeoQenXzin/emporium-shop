@@ -8,13 +8,15 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 const RatingStars = ({ rating }) => {
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconFilled": {
-      color: "#FCD34D", // Couleur des étoiles pleines
+      // color: "#FCD34D", // Couleur des étoiles pleines
+      color: "rgb(248 113 113)", // Couleur des étoiles pleines
     },
     "& .MuiRating-iconHover": {
       color: "#ff3d47", // Couleur au survol
     },
     "& .MuiRating-iconEmpty": {
-      color: "#FCD34D",
+      color: "rgb(248 113 113)",
+      // color: "#FCD34D",
       // Couleur des étoiles vides, ajustez selon besoin
     },
   });
