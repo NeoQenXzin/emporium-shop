@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Poiret One', cursive;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Utilisation de la police Open Sans comme police par défaut */
+}
+
+h1, h2, h3 {
+  font-family: 'Della Respira', cursive; /* Utilisation de la police Della Respira pour les titres */
+}
+
+

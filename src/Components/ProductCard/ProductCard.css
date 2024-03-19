@@ -1,0 +1,32 @@
+:root {
+    --toastify-color-progress-success: #A1E3D8;
+    --toastify-color-progress-error: #FAD2E1;
+    --toastify-color-progress-warning: #FFE5D9;
+    --toastify-color-progress-info: #DCEEFB;
+    --toastify-text-color-light: #635D5C;
+    --toastify-text-color-dark: #FFFFFF;
+  }
+
+.title-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description-line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  max-height: 3em; /* Assurez-vous que la hauteur maximale est suffisante pour deux lignes de texte */
+  line-height: 1.5em; /* Ajustez en fonction de la taille de ligne de votre texte */
+}
+
+
+.description-container .see-more {
+  display: block; /* Assurez-vous que "Voir plus" apparaisse sur sa propre ligne */
+  color: #017AFF; /* Choisissez une couleur appropriée */
+  cursor: pointer;
+  text-decoration: underline; /* Optionnel: souligne pour indiquer qu'il s'agit d'un lien ou d'une action */
+}
+  

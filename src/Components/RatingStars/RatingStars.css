@@ -1,0 +1,27 @@
+/* Code rating étoile */
+/* Code rating étoile */
+
+.rating-stars {
+    display: inline-block;
+  }
+  
+  .star {
+    /* font-size: 24px;  */
+    color: #fdd835; /* Couleur des étoiles remplies en jaune */
+  }
+  
+  .empty-stars .star {
+    color: #ccc; /* Couleur des étoiles vides */
+  }
+  
+  .filled-stars {
+    overflow: hidden; /* Cacher les étoiles remplies qui dépassent */
+    position: relative; /* Modifier la position en relative */
+    display: inline-block; /* Ajouter cette règle pour que les étoiles remplissent correctement */
+  }
+  
+  .filled-stars .star {
+    display: inline-block; /* Ajouter cette règle pour que les étoiles remplissent correctement */
+    position: static; /* Modifier la position en static */
+  }
+  

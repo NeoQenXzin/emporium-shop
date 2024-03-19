@@ -1,0 +1,88 @@
+
+li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 10px 0;
+  }
+ 
+  li:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(245,158,11);
+
+    background: linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(252,211,77,1) 35%, rgba(253,230,138,1) 100%);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  li:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .logo img {
+    width: 100px; /* Ajustez selon la taille de votre logo */
+  }
+  
+  .toggleMenu {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .menu li a.active {
+    color: #0056b3;
+  }
+  
+  /* Style pour cacher le menu quand il n'est pas ouvert */
+  .menu:not(.open) {
+    display: none;
+  }
+  /* Styles pour le menu collapse */
+.menu-collapse {
+    display: none; /* Caché par défaut */
+  }
+  
+  .menu-collapse.open {
+    display: flex; /* Affiché lorsque le menu est ouvert */
+    flex-direction: column; /* Les éléments du menu sont en colonne */
+  }
+  
+  @media (min-width: 1024px) {
+    .menu-collapse {
+      display: flex; /* En mode large, le menu est toujours visible */
+      flex-direction: row; /* Les éléments du menu sont en ligne */
+    }
+    .menu-collapse.open {
+      flex-direction: row !important; /* Garantit que les éléments du menu sont en ligne même quand le menu est ouvert */
+    }
+  }
+  
