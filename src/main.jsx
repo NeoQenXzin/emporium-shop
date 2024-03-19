@@ -5,10 +5,11 @@ import "./index.css";
 // redux toolkit
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={store} basename="/emporium-shopline">
       <App />
     </Provider>
   </React.StrictMode>

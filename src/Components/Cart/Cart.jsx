@@ -8,7 +8,7 @@ import "./Cart.css";
 const Cart = () => {
   const items = useSelector((state) => state.cart.items);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
-  const shipping = 5;
+  const shippingCost = 5;
 
   const dispatch = useDispatch();
 
@@ -128,15 +128,15 @@ const Cart = () => {
               <p className="text-gray-700">{totalAmount.toFixed(2)} €</p>
             </div>
             <div className="flex justify-between">
-              <p className="text-gray-700">Shipping : </p>
-              <p className="text-gray-700">$4.99</p>
+              <p className="text-gray-700">ShippingCost : </p>
+              <p className="text-gray-700">{shippingCost}</p>
             </div>
             <hr className="my-4" />
             <div className="flex justify-between">
               <p className="text-lg font-bold">Total :</p>
               <div className="">
                 <p className="mb-1 text-lg font-bold">
-                  {totalAmount.toFixed(2) + shipping} €
+                  {(totalAmount + shippingCost).toFixed(2)} €
                 </p>
                 <p className="text-sm text-gray-700">including tva</p>
               </div>

@@ -12,12 +12,12 @@ import { Categorie } from "./Components/Categorie/Categorie";
 import Product from "./Components/Product/Product";
 // import Header from "./Components/Header/Header";
 import Cart from "./Components/Cart/Cart";
-import Test from "./Components/Test/Test";
+import Header from "./Components/HeaderX/HeaderX";
 
 function App() {
   return (
-    <Router>
-      <Test />
+    <Router basename="/emporium-shop">
+      <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/products" replace />} />
         <Route path="/cart" element={<Cart />} />

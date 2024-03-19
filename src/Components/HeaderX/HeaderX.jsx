@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import logo from "../../assets/emporium-logo.png";
 
 const Test = () => {
   //Affichage item dans panier
@@ -56,11 +57,7 @@ const Test = () => {
           to="/"
           className="w-full h-52 flex justify-center overflow-hidden lg:h-72"
         >
-          <img
-            src="public/emporium-logo.png"
-            alt="logo"
-            className="w-full h-58 center  "
-          />
+          <img src={logo} alt="logo" className="w-full h-58 center  " />
         </Link>
 
         <button
