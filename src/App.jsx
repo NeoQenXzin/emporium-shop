@@ -16,6 +16,7 @@ import Header from "./Components/HeaderX/HeaderX";
 
 function App() {
   return (
+    // <Router basename="/emporium-shopinline">
     <Router basename="/emporium-shop">
       <Header />
       <Routes>
